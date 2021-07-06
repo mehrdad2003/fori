@@ -14,22 +14,22 @@ const Koli = () => {
    const container=useRef(null)
    const container1=useRef(null)
    const container2=useRef(null)
-    const { height } = useWindowDimensions();
+    const { height,width } = useWindowDimensions();
 
    useEffect(()=>{
      
          
         if(value && !data){
              const myHeight2 = container2.current.getBoundingClientRect().height
-           container.current.style.height=`${height>800?`${myHeight2+320}px`:`${myHeight2+1500}px`}`
+           container.current.style.height=`${(height>700&&width>1294)?`${myHeight2+350}px`:`${myHeight2+1500}px`}`
              
         }
         else if(data && value){
              const myHeight=container1.current.getBoundingClientRect().height
-            container.current.style.height=`${myHeight+310}px`
+            container.current.style.height=`${myHeight+340}px`
         }
         else if(value===0){
-             container.current.style.height=`${height>800?'50vh':'120vh'}`
+             container.current.style.height=`${(height>700&&width>1294)?'50vh':'120vh'}`
         }
    },[value,data,height])
   
