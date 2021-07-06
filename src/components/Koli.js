@@ -29,7 +29,7 @@ const Koli = () => {
             container.current.style.height=`${myHeight+310}px`
         }
         else if(value===0){
-             container.current.style.height=`${height>700?'50vh':'120vh'}`
+             container.current.style.height=`${height>800?'50vh':'120vh'}`
         }
    },[value,data,height])
   
