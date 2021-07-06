@@ -21,7 +21,7 @@ const Koli = () => {
          
         if(value && !data){
              const myHeight2 = container2.current.getBoundingClientRect().height
-           container.current.style.height=`${height>700?`${myHeight2+320}px`:`${myHeight2+1100}px`}`
+           container.current.style.height=`${height>800?`${myHeight2+320}px`:`${myHeight2+1500}px`}`
              
         }
         else if(data && value){
